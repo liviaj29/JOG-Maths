@@ -1,6 +1,6 @@
 {
     "name": "jog-maths",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "library of maths functions in JS",
     "main": "maths.js",
     "type": "module",
