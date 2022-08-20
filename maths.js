@@ -18,7 +18,7 @@ export const sumOfSquares = n => (n*(n+1)*(2*n+1))/6
 
 export const sumOfCubes = n => ((n**2)*((n+1)**2))/4
 
-export const digitSum = n => Number([...n.toString()].reduce((s,x)=> Number(x)+s,0))
+export const digitSum = n => n%9
 
 export const roundDP = (n,dp) => n.toFixed(dp)
 
@@ -26,10 +26,7 @@ export const roundSF = (n, sf) => n.toPrecision(sf)
 
 export const gcd = (a,b) => b ? gcd(b, a%b) : a
 
-export const lcm = (a,b) => {
-  const hcf = (c,d) => b ? hcf(d, c%d) : c
-  return (a*b)/hcf(a,b)
-}
+export const lcm = (a,b) => (a*b)/gcd(a,b)
 
 const Maths = {
   factorial, randomInt, isPrime, factors, even, odd, digitSum, roundDP, roundSF, gcd, lcm, sum, sumOfSquares, sumOfCubes
