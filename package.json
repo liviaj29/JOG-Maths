@@ -1,0 +1,20 @@
+{
+    "name": "jog-maths",
+    "version": "0.1.0",
+    "description": "library of maths functions in JS",
+    "main": "maths.js",
+    "type": "module",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/liviaj29/JOG-Maths"
+    },
+    "scripts": {
+        "test": "No tests yet"
+    },
+    "keywords": [
+        "maths",
+        "functions"
+    ],
+    "author": "Olivia <gibson.oj295@gmail.com>",
+    "license": "Unlicense"
+}
