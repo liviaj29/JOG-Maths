@@ -9,12 +9,15 @@
         "url": "https://github.com/liviaj29/JOG-Maths"
     },
     "scripts": {
-        "test": "No tests yet"
+        "test": "mocha"
     },
     "keywords": [
         "maths",
         "functions"
     ],
     "author": "Olivia <gibson.oj295@gmail.com>",
-    "license": "Unlicense"
+    "license": "Unlicense",
+    "dependencies": {
+        "mocha": "^10.0.0"
+    }
 }

@@ -18,11 +18,11 @@ export const sumOfSquares = n => (n*(n+1)*(2*n+1))/6
 
 export const sumOfCubes = n => ((n**2)*((n+1)**2))/4
 
-export const digitSum = n => n%9
+export const digitSum = n => n === 0 ? 0 : n%9 || 9
 
-export const roundDP = (n,dp) => n.toFixed(dp)
+export const roundDP = (n,dp=0) => Number(n.toFixed(dp))
 
-export const roundSF = (n, sf) => n.toPrecision(sf)
+export const roundSF = (n, sf=1) => Number(n.toPrecision(sf))
 
 export const gcd = (a,b) => b ? gcd(b, a%b) : a
 
