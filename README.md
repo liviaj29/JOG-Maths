@@ -2,8 +2,6 @@
 
 This mini JavaScript library is made up of useful mathematical functions that the inbuilt Math library does not have. 
 
-The functions are also based on mathematical formulas and can therefore reduce the order of functions significantly.
-
 ## `factorial`
 Accepts an integer and returns the product of all the integers up to and including the integer.
 ```javascript
@@ -21,7 +19,7 @@ Maths.randomInt(6) = 3 //random integer between 0 and 5
 ```
 
 ## `isPrime`
-Accepts an integer and returns a Boolean value based on whether it is a Prime number or not. Prime numbers are numbers that only have themselves and 1 as factors.
+Accepts an integer and returns a Boolean value based on whether it is a Prime number or not. Prime numbers are numbers that only have two distinct factors.
 ```javascript
 Maths.isPrime(13) === true
 
@@ -75,15 +73,19 @@ Maths.digitSum(123) === 6 //1 + 2 + 3
 ```
 
 ## `roundDP`
-Takes two parameters, a floating-point number and the number of decimal places wanted. Returns the floating-point number rounded to the specified number of decimal places.
+Takes two parameters, a floating-point number and the number of decimal places wanted (with a default value of 0). Returns the floating-point number rounded to the specified number of decimal places.
 ```javascript
 Maths.roundDP(1.234567, 3) === 1.235
+
+Maths.roundDP(3.14) === 3
 ```
 
 ## `roundSF`
-Takes two parameters, a real number and the number of figures wanted. Returns the real number rounded to the specified number of figures.
+Takes two parameters, a real number and the number of figures wanted (with a default value of 1). Returns the real number rounded to the specified number of figures.
 ```javascript
 Maths.roundSF(1234567, 3) === 1230000
+
+Math.roundSF(123.45) === 100
 ```
 
 ## `gcd`
@@ -96,4 +98,6 @@ Maths.gcd(20, 10) === 10
 Takes two integers as parameters and returns the lowest common multiple of the two.
 ```javascript
 Maths.lcm(2,3) === 6
+
+Maths.lcm(8,4) === 8
 ```
