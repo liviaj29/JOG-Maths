@@ -47,11 +47,17 @@ describe("even and odd functions", function () {
   it('should say 7 is not even', function () {
     assert.equal(Maths.even(7), false);
   });
+  it('even should throw a range error if an intgeger is not given', function () {
+    assert.throws(_ => Maths.even(1.2),RangeError,"Value must be an integer.");
+  });
   it('should say 1 is odd', function () {
     assert.equal(Maths.odd(1), true);
   });
   it('should say 0 is NOT odd', function () {
     assert.equal(Maths.odd(0), false);
+  });
+  it('odd should throw a range error if an intgeger is not given', function () {
+    assert.throws(_ => Maths.odd("one"),RangeError,"Value must be an integer.");
   });
 });
 
@@ -110,10 +116,16 @@ describe("gcd and lcm functions", function () {
   it('should return the gcd of numbers with a common factor', function () {
     assert.equal(Maths.gcd(8,12), 4);
   });
+  it('should return the gcd of three numbers', function () {
+    assert.equal(Maths.gcd(8,12,18), 2);
+  });
   it('should return the lcm of coprimes', function () {
     assert.equal(Maths.lcm(3,5), 15);
   });
   it('should return the lcm of numbers with a common factor', function () {
     assert.equal(Maths.lcm(8,12), 24);
+  });
+  it('should return the lcm of three numbers', function () {
+    assert.equal(Maths.lcm(8,12,20), 120);
   });
 });

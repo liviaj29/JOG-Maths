@@ -8,9 +8,15 @@ export const isPrime = n => !(n < 2 || (n > 2 && n%2 ===0) || [...Array(Math.flo
 
 export const factors = n => [...Array(Math.abs(n))].map((_,i)=>++i).filter(x => n%x === 0)
 
-export const even = n => n%2 === 0
+export const even = n => {
+  if(Number.isInteger(n)) return n%2 === 0
+  else throw RangeError("Value must be an integer.")
+}
 
-export const odd = n => n%2 !== 0
+export const odd = n => {
+  if(Number.isInteger(n)) return n%2 !== 0
+  else throw RangeError("Value must be an integer.")
+}
 
 export const sum = n => (n*(n+1))/2
 
@@ -24,9 +30,11 @@ export const roundDP = (n,dp=0) => Number(n.toFixed(dp))
 
 export const roundSF = (n, sf=1) => Number(n.toPrecision(sf))
 
-export const gcd = (a,b) => b ? gcd(b, a%b) : a
+const hcf = (a,b) => b ? gcd(b, a%b) : a
 
-export const lcm = (a,b) => (a*b)/gcd(a,b)
+export const gcd = (...numbers) => numbers.reduce((x,n) => hcf(x,n))
+
+export const lcm = (...numbers) => numbers.reduce((product,n) => product * n,1)/(gcd(...numbers)**(numbers.length-1))
 
 const Maths = {
   factorial, randomInt, isPrime, factors, even, odd, digitSum, roundDP, roundSF, gcd, lcm, sum, sumOfSquares, sumOfCubes
